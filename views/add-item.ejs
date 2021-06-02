@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+  <%- include('./partials/nav.ejs') %> 
+    <div class="row container">
+        <form class="col s12" action="/items" method="POST">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">shop</i>
+              <input id="item_name" type="text" class="validate" name="name">
+              <label for="item_name">Item Name</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">request_quote</i>
+              <input id="price" type="number" class="validate" name="price">
+              <label for="price">Price</label>
+            </div>
+          </div>
+          <button class="btn">Add Item</button>
+        </form>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          M.updateTextFields();
+        });</script>
+</body>
+</html>
